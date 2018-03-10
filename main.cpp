@@ -112,8 +112,8 @@ int main()
     char buffer[256];
     setvbuf(stdout, buffer, _IOLBF, sizeof(buffer));
 
-    for (const auto i : { 1, 2, 3, 4, 5 }) {
-        const auto p = my_malloc(8);
+    for (const auto i : { 3, 4, 1, 5, 2 }) {
+        const auto p = my_malloc(i * 8);
         if (p) {
             printf("%d: %p\n", i, (void *) *p);
         } else {
